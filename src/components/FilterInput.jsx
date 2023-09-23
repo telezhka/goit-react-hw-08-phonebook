@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { setFilter } from 'redux/filterSlice';
+import { setFilter } from 'redux/contacts/filterSlice';
 export const FilterInput = () => {
   const dispatch = useDispatch();
   const [value, setValue] = useState('');
