@@ -1,0 +1,7 @@
+.wrapper {
+  display: flex;
+  gap: 40px;
+}
+.link {
+  font-size: 18px;
+}
