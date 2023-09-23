@@ -1,9 +1,10 @@
 import React from 'react';
 import css from '../css/ContactsList.module.css';
 // import PropTypes from 'prop-types';
-import { getContacts, getFilter } from 'redux/selectors';
+// import { getContacts, getFilter } from 'redux/selectors';
 import { useDispatch, useSelector } from 'react-redux';
-import { deleteContact } from 'redux/operations';
+import { deleteContact } from 'redux/contacts/operations';
+import { selectAllContacts, selectFilter } from 'redux/contacts/selectors';
 
 const getVisibleContacts = (contacts, filter) => {
   if (filter) {
@@ -16,9 +17,9 @@ const getVisibleContacts = (contacts, filter) => {
 };
 
 export const ContactList = () => {
-  const contacts = useSelector(getContacts);
-  const filter = useSelector(getFilter);
-  console.log(contacts, filter);
+  const contacts = useSelector(selectAllContacts);
+  const filter = useSelector(selectFilter);
+  // console.log(contacts, filter);
   const dispatch = useDispatch();
   const visible = getVisibleContacts(contacts, filter);
   const onDeleteContact = id => {

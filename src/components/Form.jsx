@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import css from '../css/Form.module.css';
-import { addContact } from 'redux/operations';
-import { isContactNameUnique } from 'redux/selectors';
+import { addContact } from 'redux/contacts/operations';
+import { isContactNameUnique } from 'redux/contacts/selectors';
 
 export const Form = () => {
   const [name, setName] = useState('');
